@@ -1,0 +1,286 @@
+﻿namespace LunchOrder
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gbxMain = new System.Windows.Forms.GroupBox();
+            this.rbSalad = new System.Windows.Forms.RadioButton();
+            this.rbPizza = new System.Windows.Forms.RadioButton();
+            this.rbHamburger = new System.Windows.Forms.RadioButton();
+            this.gbxOptions = new System.Windows.Forms.GroupBox();
+            this.cbOption3 = new System.Windows.Forms.CheckBox();
+            this.cbOption2 = new System.Windows.Forms.CheckBox();
+            this.cbOption1 = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTax = new System.Windows.Forms.Label();
+            this.lblSubTotal = new System.Windows.Forms.Label();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.txtPreview = new System.Windows.Forms.TextBox();
+            this.gbxMain.SuspendLayout();
+            this.gbxOptions.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gbxMain
+            // 
+            this.gbxMain.Controls.Add(this.rbSalad);
+            this.gbxMain.Controls.Add(this.rbPizza);
+            this.gbxMain.Controls.Add(this.rbHamburger);
+            this.gbxMain.Location = new System.Drawing.Point(12, 12);
+            this.gbxMain.Name = "gbxMain";
+            this.gbxMain.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gbxMain.Size = new System.Drawing.Size(141, 100);
+            this.gbxMain.TabIndex = 0;
+            this.gbxMain.TabStop = false;
+            this.gbxMain.Text = "Main Course";
+            // 
+            // rbSalad
+            // 
+            this.rbSalad.AutoSize = true;
+            this.rbSalad.Location = new System.Drawing.Point(6, 65);
+            this.rbSalad.Name = "rbSalad";
+            this.rbSalad.Size = new System.Drawing.Size(82, 17);
+            this.rbSalad.TabIndex = 2;
+            this.rbSalad.TabStop = true;
+            this.rbSalad.Text = "Salad - 4.95";
+            this.rbSalad.UseVisualStyleBackColor = true;
+            this.rbSalad.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // rbPizza
+            // 
+            this.rbPizza.AutoSize = true;
+            this.rbPizza.Location = new System.Drawing.Point(6, 42);
+            this.rbPizza.Name = "rbPizza";
+            this.rbPizza.Size = new System.Drawing.Size(80, 17);
+            this.rbPizza.TabIndex = 1;
+            this.rbPizza.TabStop = true;
+            this.rbPizza.Text = "Pizza - 5.95";
+            this.rbPizza.UseVisualStyleBackColor = true;
+            this.rbPizza.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // rbHamburger
+            // 
+            this.rbHamburger.AutoSize = true;
+            this.rbHamburger.Location = new System.Drawing.Point(6, 19);
+            this.rbHamburger.Name = "rbHamburger";
+            this.rbHamburger.Size = new System.Drawing.Size(113, 17);
+            this.rbHamburger.TabIndex = 0;
+            this.rbHamburger.TabStop = true;
+            this.rbHamburger.Text = "Hamburger - $6.95";
+            this.rbHamburger.UseVisualStyleBackColor = true;
+            this.rbHamburger.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // gbxOptions
+            // 
+            this.gbxOptions.Controls.Add(this.cbOption3);
+            this.gbxOptions.Controls.Add(this.cbOption2);
+            this.gbxOptions.Controls.Add(this.cbOption1);
+            this.gbxOptions.Location = new System.Drawing.Point(159, 12);
+            this.gbxOptions.Name = "gbxOptions";
+            this.gbxOptions.Size = new System.Drawing.Size(198, 100);
+            this.gbxOptions.TabIndex = 1;
+            this.gbxOptions.TabStop = false;
+            this.gbxOptions.Text = "Add-on items";
+            // 
+            // cbOption3
+            // 
+            this.cbOption3.AutoSize = true;
+            this.cbOption3.Location = new System.Drawing.Point(6, 65);
+            this.cbOption3.Name = "cbOption3";
+            this.cbOption3.Size = new System.Drawing.Size(80, 17);
+            this.cbOption3.TabIndex = 2;
+            this.cbOption3.Text = "checkBox3";
+            this.cbOption3.UseVisualStyleBackColor = true;
+            // 
+            // cbOption2
+            // 
+            this.cbOption2.AutoSize = true;
+            this.cbOption2.Location = new System.Drawing.Point(6, 42);
+            this.cbOption2.Name = "cbOption2";
+            this.cbOption2.Size = new System.Drawing.Size(80, 17);
+            this.cbOption2.TabIndex = 1;
+            this.cbOption2.Text = "checkBox2";
+            this.cbOption2.UseVisualStyleBackColor = true;
+            // 
+            // cbOption1
+            // 
+            this.cbOption1.AutoSize = true;
+            this.cbOption1.Location = new System.Drawing.Point(6, 19);
+            this.cbOption1.Name = "cbOption1";
+            this.cbOption1.Size = new System.Drawing.Size(80, 17);
+            this.cbOption1.TabIndex = 0;
+            this.cbOption1.Text = "checkBox1";
+            this.cbOption1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.lblTotal);
+            this.groupBox3.Controls.Add(this.lblTax);
+            this.groupBox3.Controls.Add(this.lblSubTotal);
+            this.groupBox3.Location = new System.Drawing.Point(12, 118);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Order Total";
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(25, 69);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 23);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Order Total";
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(25, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 23);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Tax (7.75%)";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(25, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 23);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Sub Total";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotal.Location = new System.Drawing.Point(94, 69);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(100, 23);
+            this.lblTotal.TabIndex = 2;
+            // 
+            // lblTax
+            // 
+            this.lblTax.BackColor = System.Drawing.Color.White;
+            this.lblTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTax.Location = new System.Drawing.Point(94, 46);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.Size = new System.Drawing.Size(100, 23);
+            this.lblTax.TabIndex = 1;
+            // 
+            // lblSubTotal
+            // 
+            this.lblSubTotal.BackColor = System.Drawing.Color.White;
+            this.lblSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSubTotal.Location = new System.Drawing.Point(94, 23);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(100, 23);
+            this.lblSubTotal.TabIndex = 0;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(282, 118);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnOrder.TabIndex = 3;
+            this.btnOrder.Text = "Place Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(282, 194);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // txtPreview
+            // 
+            this.txtPreview.Location = new System.Drawing.Point(363, 12);
+            this.txtPreview.Multiline = true;
+            this.txtPreview.Name = "txtPreview";
+            this.txtPreview.Size = new System.Drawing.Size(107, 206);
+            this.txtPreview.TabIndex = 5;
+            // 
+            // Form1
+            // 
+            this.AcceptButton = this.btnOrder;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnExit;
+            this.ClientSize = new System.Drawing.Size(482, 229);
+            this.Controls.Add(this.txtPreview);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gbxOptions);
+            this.Controls.Add(this.gbxMain);
+            this.Name = "Form1";
+            this.Text = "Lunch Order";
+            this.gbxMain.ResumeLayout(false);
+            this.gbxMain.PerformLayout();
+            this.gbxOptions.ResumeLayout(false);
+            this.gbxOptions.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox gbxMain;
+        private System.Windows.Forms.RadioButton rbSalad;
+        private System.Windows.Forms.RadioButton rbPizza;
+        private System.Windows.Forms.RadioButton rbHamburger;
+        private System.Windows.Forms.GroupBox gbxOptions;
+        private System.Windows.Forms.CheckBox cbOption3;
+        private System.Windows.Forms.CheckBox cbOption2;
+        private System.Windows.Forms.CheckBox cbOption1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTax;
+        private System.Windows.Forms.Label lblSubTotal;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtPreview;
+    }
+}
+
