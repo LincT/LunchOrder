@@ -12,13 +12,11 @@ namespace LunchOrder
 {
     public partial class Form1 : Form
     {
-        string mainChoice;
-        decimal extraPrice;
+        //global variables for values that could get called by multiple functions
+        //without any guarantee of sequence
+        string mainChoice;//easier to just ask a string value than repeatedly check controls
+        decimal extraPrice;//holds current cost of extras set in relation to main chosen
         
-
-        SortedList<string, decimal> mainPrice = new SortedList<string, decimal>
-        { { "Hamburger", 6.95m}, {"Pizza", 5.95m }, {"Salad",4.95m } };
-
 
         public Form1()
         {
@@ -74,6 +72,9 @@ namespace LunchOrder
         }
         private void itemPrice()
         {
+            //define prices for main items.
+            SortedList<string, decimal> mainPrice = new SortedList<string, decimal>
+            { { "Hamburger", 6.95m}, {"Pizza", 5.95m }, {"Salad",4.95m } };
             decimal tax = .0775m;
             decimal tempCalc = mainPrice[mainChoice];
             if (cbOption1.Checked) { tempCalc += extraPrice; }
@@ -86,6 +87,7 @@ namespace LunchOrder
         }
         public List<string> getOptions()
         {
+            //generate a list of checked options
             List<string> preOptions = new List<string> { };
             if (cbOption1.Checked) { preOptions.Add(cbOption1.Text); }
             if (cbOption2.Checked) { preOptions.Add(cbOption2.Text); }
@@ -97,17 +99,20 @@ namespace LunchOrder
         {
             if(lbPreview.Items.Count == 0)
             {
+                //don't process order if empty
                 MessageBox.Show("No items in order.");
             }
             else
             {
-                string receiptString = "Order receipt:\n";
+                //send order details to a receipt.
+                string receiptString = "";
                 foreach(object item in lbPreview.Items)
                 {
                     receiptString += lbPreview.GetItemText(item) + "\n";
                 }
-                receiptString += 
-                MessageBox.Show(receiptString);
+                receiptString += "\nGrand Total w/ Tax:\t" + lblGrand.Text;
+                orderStart();
+                MessageBox.Show(receiptString,"Receipt");
             }
         }
 
@@ -116,26 +121,25 @@ namespace LunchOrder
             try
             {
                 decimal grandTotal;
-                //txtPreview.Text += mainChoice + "\n\t" + getOptions() + "\n\t" + lblTotal.Text + "\n";
-                lbPreview.Items.Add(mainChoice);
+                //add user selection to preview listbox, and calculate running total.
+                lbPreview.Items.Add(mainChoice); //add our main item
                 List<string> optionItems = getOptions();
                 if (optionItems.Count > 0)
                 {
                     foreach (string optionItem in optionItems)
                     {
-                        lbPreview.Items.Add(optionItem);
+                        lbPreview.Items.Add(optionItem);// add in each extra
                     }
                 }
                      
-                lbPreview.Items.Add("Item Total: " + lblTotal.Text);
-                //preventative check to avoid null value errors
-                if (lblGrand.Text == "") { lblGrand.Text = (0.00m).ToString("c"); }
+                lbPreview.Items.Add("Item Total: " + lblTotal.Text);//add item price to order desc 
+                //use .remove to strip the first character, $
                 grandTotal = Convert.ToDecimal(lblGrand.Text.Remove(0,1)) +
                     Convert.ToDecimal(lblTotal.Text.Remove(0,1));
-                lblGrand.Text = grandTotal.ToString("c");
+                lblGrand.Text = grandTotal.ToString("c");// update and display grand total
                 
             }
-            catch (Exception ex)
+            catch (Exception ex) //generic catch to understand unanticipated errors
             {
                 MessageBox.Show(ex.Message);
                 throw;
@@ -144,8 +148,26 @@ namespace LunchOrder
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            orderStart();
+        }
+
+        private void orderStart()
+        {
+            //method to initialize form controls, can be called as needed.
             lbPreview.Items.Clear();
-            lblGrand.Text = "";
+            lblGrand.Text = (0.00m).ToString("c");
+            cbOption1.Checked = false;
+            cbOption2.Checked = false;
+            cbOption3.Checked = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //forces initialization to force radioButton_CheckedChanged to run, initializing
+            //mainChoice with a value and guaranteeing it's still accurate to which radio button
+            //is actually checked. (why handle an error if we can prevent it?)
+            rbHamburger.Select(); 
+            orderStart();
         }
     }
 

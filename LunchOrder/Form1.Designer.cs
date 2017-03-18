@@ -37,6 +37,8 @@
             this.cbOption2 = new System.Windows.Forms.CheckBox();
             this.cbOption1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblGrand = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbPreview = new System.Windows.Forms.ListBox();
             this.btnClear = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblGrand = new System.Windows.Forms.Label();
             this.gbxMain.SuspendLayout();
             this.gbxOptions.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -166,13 +166,30 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order Total";
             // 
+            // lblGrand
+            // 
+            this.lblGrand.BackColor = System.Drawing.Color.White;
+            this.lblGrand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblGrand.Location = new System.Drawing.Point(192, 92);
+            this.lblGrand.Name = "lblGrand";
+            this.lblGrand.Size = new System.Drawing.Size(100, 23);
+            this.lblGrand.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(6, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 23);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Current Total (w/ tax)";
+            // 
             // label6
             // 
             this.label6.Location = new System.Drawing.Point(6, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 23);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Item Total";
+            this.label6.Text = "Item Total (w/ tax)";
             // 
             // label5
             // 
@@ -266,23 +283,6 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(6, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 23);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Current Total (w/ tax)";
-            // 
-            // lblGrand
-            // 
-            this.lblGrand.BackColor = System.Drawing.Color.White;
-            this.lblGrand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblGrand.Location = new System.Drawing.Point(192, 92);
-            this.lblGrand.Name = "lblGrand";
-            this.lblGrand.Size = new System.Drawing.Size(100, 23);
-            this.lblGrand.TabIndex = 8;
-            // 
             // Form1
             // 
             this.AcceptButton = this.btnAdd;
@@ -300,6 +300,7 @@
             this.Controls.Add(this.gbxMain);
             this.Name = "Form1";
             this.Text = "Lunch Order";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbxMain.ResumeLayout(false);
             this.gbxMain.PerformLayout();
             this.gbxOptions.ResumeLayout(false);
